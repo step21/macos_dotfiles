@@ -3,3 +3,10 @@
 # Please adapt and uncomment the following lines:
 name = step21
 email = step21@devtal.de 
+[alias]
+	new = !git init && git symbolic-ref HEAD refs/heads/main
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
